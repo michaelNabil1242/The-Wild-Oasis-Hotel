@@ -1,8 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
-import { getCabins } from "../../services/apiCabins";
 import Spinner from "../../ui/Spinner";
 import CabinRow from "./CabinRow";
+import useCabins from "./useCabins";
 
 const Table = styled.div`
   border: 1px solid var(--color-grey-200);
@@ -29,14 +28,7 @@ const TableHeader = styled.header`
 `;
 
 function CabinTable() {
-  const {
-    isLoading,
-    data: cabins,
-    error,
-  } = useQuery({
-    queryKey: ["cabins"], //when we use rectquery again with that key the same data will be read from the cache
-    queryFn: getCabins, // responsible for quering (fetching the data from the api) , needs to return a promise
-  });
+  const { isLoading, cabins } = useCabins();
   if (isLoading) return <Spinner />;
 
   return (
