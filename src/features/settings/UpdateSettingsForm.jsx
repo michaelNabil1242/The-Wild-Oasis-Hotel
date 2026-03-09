@@ -15,7 +15,6 @@ function UpdateSettingsForm() {
   } = settings || {}; // in the beginings its is undefined
   const { isUpdating, updateSetting } = useUpdateSetting();
   function handleUpdate(e, field) {
-    console.log(field);
     updateSetting({ [field]: e.target.value });
   }
   if (isLoading) return <Spinner />;
