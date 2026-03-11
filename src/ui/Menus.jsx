@@ -110,7 +110,7 @@ function Button({ children, icon, onClick }) {
   const { close } = useContext(MenusContext);
   function handleClick() {
     onClick?.();
-    // close();
+    close();
   }
   return (
     <li>
