@@ -2,6 +2,10 @@
 
 A comprehensive React application for managing bookings, cabins, and guests at a wilderness retreat. Built with modern web technologies for a seamless user experience.
 
+## 🌐 Demo
+
+Check out the live demo: [The Wild Oasis](https://the-wild-oasis-hotel-zeta.vercel.app/)
+
 ## 🎯 Features
 
 - **User Authentication**: Secure login, signup, profile updates, and password management
@@ -11,6 +15,10 @@ A comprehensive React application for managing bookings, cabins, and guests at a
 - **Responsive Design**: Mobile-friendly UI built with styled-components
 - **File Uploads**: Support for image uploads and client-side state management
 - **Data Visualization**: Charts for sales, duration, and activity tracking
+
+## 🌐 Demo
+
+Check out the live demo: [The Wild Oasis](https://wild-oasis-hotel-webapplication.netlify.app/login)
 
 ## 🚀 Getting Started
 
@@ -97,6 +105,24 @@ src/
 - **Cabin Inventory**: Manage accommodation listings
 - **Dashboard**: Real-time statistics and business metrics
 - **Check-in/Out System**: Streamlined guest arrival/departure process
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+If you have any questions or suggestions, feel free to open an issue or contact the maintainers.
 
 ## 🔧 Development
 
