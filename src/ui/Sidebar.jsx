@@ -54,7 +54,7 @@ function Sidebar({ isOpen = false, onClose = () => {} }) {
       <Overlay isOpen={isOpen} onClick={onClose} />
       <StyledSidebar isOpen={isOpen}>
         <Logo />
-        <MainNav />
+        <MainNav onClose={onClose} />
         <Uploader />
       </StyledSidebar>
     </>
