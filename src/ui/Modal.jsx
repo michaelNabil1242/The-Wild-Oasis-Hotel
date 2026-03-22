@@ -14,6 +14,22 @@ const StyledModal = styled.div`
   box-shadow: var(--shadow-lg);
   padding: 3.2rem 4rem;
   transition: all 0.5s;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  @media (max-width: 768px) {
+    padding: 2.4rem 2.4rem;
+    width: 90vw;
+    max-width: 90vw;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.6rem 1.6rem;
+    width: 95vw;
+    max-width: 95vw;
+    top: 50%;
+    max-height: 95vh;
+  }
 `;
 
 const Overlay = styled.div`
@@ -50,6 +66,11 @@ const Button = styled.button`
     /* fill: var(--color-grey-500);
     stroke: var(--color-grey-500); */
     color: var(--color-grey-500);
+  }
+
+  @media (max-width: 480px) {
+    top: 0.8rem;
+    right: 1rem;
   }
 `;
 const ModalContext = createContext();

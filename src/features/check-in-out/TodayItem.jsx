@@ -18,6 +18,25 @@ const StyledTodayItem = styled.li`
   &:first-child {
     border-top: 1px solid var(--color-grey-100);
   }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 8rem 2rem 1fr 6rem 7rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  /* @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    padding: 1rem 0;
+  } */
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+  }
 `;
 
 const Guest = styled.div`

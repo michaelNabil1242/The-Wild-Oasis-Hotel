@@ -23,6 +23,19 @@ const StyledCheckbox = styled.div`
     align-items: center;
     gap: 0.8rem;
   }
+
+  @media (max-width: 480px) {
+    gap: 1.2rem;
+
+    & input[type="checkbox"] {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    & label {
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 function Checkbox({ checked, onChange, disabled = false, id, children }) {

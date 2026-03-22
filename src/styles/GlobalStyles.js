@@ -2,6 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
+  /* Media Query Breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-desktop: 1440px;
   
 &, &.light-mode{
   /* Grey */
@@ -116,6 +121,14 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 62.5%;
+  
+  @media (max-width: 768px) {
+    font-size: 56.25%;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 50%;
+  }
 }
 
 body {
