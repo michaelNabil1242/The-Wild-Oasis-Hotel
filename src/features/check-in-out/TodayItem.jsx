@@ -25,12 +25,6 @@ const StyledTodayItem = styled.li`
     font-size: 1.2rem;
   }
 
-  /* @media (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    padding: 1rem 0;
-  } */
-
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
     gap: 0.6rem;
