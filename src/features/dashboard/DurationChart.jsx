@@ -14,6 +14,7 @@ const ChartBox = styled.div`
   background-color: var(--color-grey-0);
   border: 1px solid var(--color-grey-100);
   border-radius: var(--border-radius-md);
+  width: 100%;
 
   padding: 2.4rem 3.2rem;
   grid-column: 3 / span 2;
@@ -38,6 +39,7 @@ const ChartBox = styled.div`
 
   @media (max-width: 480px) {
     grid-column: 1 / -1;
+    width: 100vw;
     padding: 1.2rem 1.6rem;
 
     & > *:first-child {
@@ -161,6 +163,7 @@ function prepareData(startData, stays) {
 }
 
 function DurationChart({ confirmStays }) {
+  const isMobile = window.innerWidth < 480;
   const { isDarkMode } = useDarkMode();
   const startData = isDarkMode ? startDataDark : startDataLight;
   const data = prepareData(startData, confirmStays);
@@ -172,9 +175,9 @@ function DurationChart({ confirmStays }) {
             data={data}
             dataKey="value"
             nameKey="duration"
-            innerRadius={85}
-            outerRadius={110}
-            cx="40%"
+            innerRadius={isMobile ? 60 : 85}
+            outerRadius={isMobile ? 80 : 110}
+            cx={isMobile ? "50%" : "40%"}
             cy="50%"
             paddingAngle={3}
           >
@@ -188,11 +191,11 @@ function DurationChart({ confirmStays }) {
           </Pie>
           <Tooltip />
           <Legend
-            verticalAlign="middle"
-            align="right"
-            width="30%"
-            layout="vertical"
-            iconSize={15}
+            verticalAlign={isMobile ? "bottom" : "middle"}
+            align={isMobile ? "center" : "right"}
+            layout={isMobile ? "horizontal" : "vertical"}
+            width={isMobile ? "100%" : "30%"}
+            iconSize={12}
             iconType="circle"
           />
         </PieChart>

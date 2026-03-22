@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const StyledApp = styled.div`
   display: grid;
@@ -44,6 +44,16 @@ const Container = styled.div`
 
 function AppLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  useEffect(
+    function () {
+      if (window.innerWidth <= 768 && isSidebarOpen) {
+        document.body.style.overflow = `hidden`;
+      } else {
+        document.body.style.overflow = `auto`;
+      }
+    },
+    [isSidebarOpen],
+  );
 
   return (
     <StyledApp>

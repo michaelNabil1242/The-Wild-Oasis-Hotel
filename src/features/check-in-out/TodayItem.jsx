@@ -26,10 +26,20 @@ const StyledTodayItem = styled.li`
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-    gap: 0.6rem;
+    /* grid-template-columns: 1fr; */
+    display: grid;
+    grid-template-columns: 1fr 15px 1fr 1fr 1fr;
+    overflow: hidden;
+    justify-content: center;
+    gap-x: 1rem;
     padding: 0.8rem 0;
     font-size: 1.2rem;
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 `;
 
